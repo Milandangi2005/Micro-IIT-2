@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <h2>🎯 Number Guessing Game</h2>
+  </header>
+
+  <button class="open-sidebar-btn" onclick="openSidebar()">📜 Rules</button>
+
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    <h3>Rules</h3>
+    <ul>
+      <li>Guess a number between 1 and 100.</li>
+      <li>You have 10 attempts.</li>
+      <li>Hints will guide you if your guess is too high or too low.</li>
+      <li>You win if you guess correctly within the given attempts.</li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="game-container">
+      <p>Try to guess the number between <strong>1 and 100</strong></p>
+      <input type="number" id="guessInput" placeholder="Enter your guess" />
+      <button onclick="checkGuess()">Submit Guess</button>
+      <p id="feedback"></p>
+      <p>Attempts Left: <span id="attempts">10</span></p>
+      <button onclick="resetGame()" id="resetBtn">Restart Game</button>
+
+      <div class="hint-container">
+        <button class="hint-btn" onclick="showHint()" title="Show Previous Guesses">🧠</button>
+        <p id="hintDisplay"></p>
+      </div>
+    </div>
+
+    <div class="extra-info">
+      <h3>About This Game</h3>
+      <p>This number guessing game challenges players to identify a random number between 1 and 100. The game gives real-time feedback to help players refine their guesses. It’s an engaging way to improve logical thinking and estimation skills while having fun!</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Micro IT Internship | Designed By Milan Dangi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
